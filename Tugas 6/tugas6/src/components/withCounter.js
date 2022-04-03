@@ -16,7 +16,12 @@ const UpdatedComponent = OriginalComponent => {
             })
         }
         render() {
-            return < OriginalComponent name='Vishwas' />
+            return (
+                < OriginalComponent
+                    count={this.state.count}
+                    incrementCount={this.incrementCount}
+                />
+            )
         }
     }
     return NewComponent
