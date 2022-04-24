@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import routes from "./routes.js";
+import routes from "./router";
 import Header from "./Header";
-import "./styles.css"
+import "./style.css"
+import * as firebase from "firebase";
+import firebaseConfig from "./firebase.config"
+
+firebase.initializeApp(firebaseConfig);
 
 export const AuthContext = React.createContext(null);
 
