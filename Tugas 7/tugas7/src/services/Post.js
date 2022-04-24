@@ -2,7 +2,7 @@ import { domainPath } from "./Config";
 
 const PostAPI = (path,data) => {
     const promise = new Promise((resolve,reject)=>{
-        fetch('${dominanPath}/${path}', {
+        fetch(`${domainPath}/${path}`, {
             methode: 'post',
             headers: {
                 'Accept': 'application/json',

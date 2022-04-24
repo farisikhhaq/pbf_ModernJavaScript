@@ -2,9 +2,9 @@ import GetAPI from "./Get";
 import PostAPI from "./Post";
 import DeleteAPI from "./Delete";
 
-const domainPath = 'http://localhost:3001';
+// const domainPath = 'http://localhost:3001';
 
-const getNewsBlog = () => GetAPI('posts?_sort=id&_order=desc');
+const getNewsBlog = () => GetAPI(`posts?_sort=id&_order=desc`);
 const postNewsBlog = (dataYgDikirim) => PostAPI('posts', dataYgDikirim);
 const deleteNewsBlog = (dataYgDihapus) => DeleteAPI('posts', dataYgDihapus);
 const API = {
@@ -15,7 +15,7 @@ const API = {
 
 // const GetAPI = (path) => {
 //     const promise = new Promise((resolve, reject) => {
-//         fetch('${domainPath}/${path}')
+//         fetch(`${domainPath}/${path}`)
 //             .then(response => response.json())
 //             .then((result) => {
 //                 resolve(result);
@@ -28,7 +28,7 @@ const API = {
 
 // const DeleteAPI = (path, data) => {
 //     const promise = new Promise((resolve, reject) => {
-//         fetch('{$domainpath}/${path}/${data}', { method: 'DELETE' })
+//         fetch(`{$domainpath}/${path}/${data}`, { method: 'DELETE' })
 //             .then((result) => {
 //                 resolve(result);
 //             }, (err) => {
@@ -38,7 +38,7 @@ const API = {
 // }
 // const PostAPI = (path, data) => {
 //     const promise = new Promise((resolve, reject) => {
-//         fetch('${domainPath}/${path}', {
+//         fetch(`${domainPath}/${path}`, {
 //             method: 'post',
 //             headers: {
 //                 'Accept': 'application/json',
