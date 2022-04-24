@@ -39,7 +39,6 @@ const Join = () => {
                     Login With Google
                 </button>
                 <button type="submit">Login</button>
-
                 <span>{error}</span>
             </form>
         </div>
